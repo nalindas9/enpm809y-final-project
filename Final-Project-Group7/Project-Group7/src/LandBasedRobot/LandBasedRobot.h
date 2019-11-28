@@ -174,7 +174,7 @@ public:
 	/**
  * @brief Destructor for base class
  * */
-	virtual ~LandBasedRobot(){}
+	~LandBasedRobot(){}
 
 };
 

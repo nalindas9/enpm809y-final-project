@@ -93,6 +93,10 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <VirtualDirectory Name="Maze">
+      <File Name="src/Maze/Maze.cpp"/>
+      <File Name="src/Maze/Maze.h"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="API">
       <File Name="src/API/API.cpp"/>
       <File Name="src/API/API.h"/>
