@@ -1,4 +1,0 @@
-<map id="rwa3::LandBasedRobot" name="rwa3::LandBasedRobot">
-<area shape="rect" id="node2" href="$classrwa3_1_1_land_based_tracked.html" title="Derived concrete class which inherits from base class LandBasedRobot. " alt="" coords="5,80,176,107"/>
-<area shape="rect" id="node3" href="$classrwa3_1_1_land_based_wheeled.html" title="Derived concrete class which inherits from base class LandBasedRobot. " alt="" coords="201,80,375,107"/>
-</map>
