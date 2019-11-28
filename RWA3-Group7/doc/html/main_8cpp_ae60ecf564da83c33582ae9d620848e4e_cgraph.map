@@ -1,0 +1,10 @@
+<map id="FollowActionPath" name="FollowActionPath">
+<area shape="rect" id="node2" href="$classrwa3_1_1_land_based_robot.html#a4c2bf4ebfeabd20d6bd21fa6ff59c0b6" title="Accessors to get the x coordinate of the robot. " alt="" coords="177,5,336,47"/>
+<area shape="rect" id="node3" href="$classrwa3_1_1_land_based_robot.html#a23f9199e740e61f951dd310223817636" title="Accessors to get the y coordinate of the robot. " alt="" coords="177,71,336,112"/>
+<area shape="rect" id="node4" href="$classrwa3_1_1_land_based_robot.html#a7ac5a55ffdb1661f0bf193d2409c666a" title="rwa3::LandBasedRobot\l::GoUp" alt="" coords="177,136,336,177"/>
+<area shape="rect" id="node5" href="$classrwa3_1_1_land_based_robot.html#a8e8e79a3c42b37502c7f8a0ca25dc8ff" title="rwa3::LandBasedRobot\l::GoDown" alt="" coords="177,201,336,243"/>
+<area shape="rect" id="node6" href="$classrwa3_1_1_land_based_robot.html#a59fd8d52eb2ae6d261f0f3cf7a40df38" title="rwa3::LandBasedRobot\l::TurnRight" alt="" coords="177,267,336,308"/>
+<area shape="rect" id="node7" href="$classrwa3_1_1_land_based_robot.html#a0ff29a7a253bcd977a51aff7a6fc4bc5" title="rwa3::LandBasedRobot\l::TurnLeft" alt="" coords="177,332,336,373"/>
+<area shape="rect" id="node8" href="$classrwa3_1_1_land_based_robot.html#a403e9c0ebcd81f08bcb39bb24f64ec9d" title="rwa3::LandBasedRobot\l::PickUp" alt="" coords="177,397,336,439"/>
+<area shape="rect" id="node9" href="$classrwa3_1_1_land_based_robot.html#aefd5593cf89d5642ca317ac5ab8fa4b6" title="rwa3::LandBasedRobot\l::Release" alt="" coords="177,463,336,504"/>
+</map>

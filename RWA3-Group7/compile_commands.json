@@ -1,0 +1,29 @@
+[{
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.h",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.h\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.cpp",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.cpp\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedRobot/landbasedrobot.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/main.cpp",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/main.cpp\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/main.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.h",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.h\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.cpp",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.cpp\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedWheeled/landbasedwheeled.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.h",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.h\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.cpp",
+  "directory": "/home/raghav/Downloads/enpm809y (5)/RWA3-Group7",
+  "command": "clang  -c \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.cpp\" -o \"/home/raghav/Downloads/enpm809y (5)/RWA3-Group7/src/LandBasedTracked/landbasedtracked.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I. -Isrc/LandBasedRobot -Isrc/LandBasedWheeled -Isrc/LandBasedTracked  -Wmain  -std=c++14  -Wall  -g  -O0  -Wall"
+ }]
