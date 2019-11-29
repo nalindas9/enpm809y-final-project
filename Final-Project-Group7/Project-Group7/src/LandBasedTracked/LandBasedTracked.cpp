@@ -1,8 +1,9 @@
 #include<iostream>
-#include "LandBasedRobot.h"
+#include "../LandBasedRobot/LandBasedRobot.h"
 #include "LandBasedTracked.h"
+#include "../API/API.h"
 
-namespace rwa3{
+namespace fp{
 	/**
  * @brief Method definition for derived class : GoUp
  * @param x position of the robot in the maze
@@ -10,6 +11,7 @@ namespace rwa3{
  * */
 	void LandBasedTracked::GoUp(int x_, int y_){
 		std::cout << "LandBasedTracked::GoUp is called\n";
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : GoDown
@@ -18,6 +20,9 @@ namespace rwa3{
  * */
 	void LandBasedTracked:: GoDown(int x_, int y_){
 		std::cout << "LandBasedTracked::GoDown is called\n";
+		API::turnLeft();
+		API::turnLeft();
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : TurnLeft
@@ -26,6 +31,7 @@ namespace rwa3{
  * */
 	void LandBasedTracked::TurnLeft(int x_, int y_){
 		std::cout << "LandBasedTracked::TurnLeft is called\n";
+		API::turnLeft();
 		} 
 /**
  * @brief Method definition for derived class : TurnRight
@@ -34,6 +40,7 @@ namespace rwa3{
  * */
 	void LandBasedTracked::TurnRight(int x_, int y_){
 		std::cout << "LandBasedTracked::TurnRight is called\n";
+		API::turnRight();
 		} 
 /**
  * @brief Method definition for derived class : PickUp

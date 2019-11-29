@@ -2,7 +2,7 @@
 #include "LandBasedRobot.h"
 #include "LandBasedWheeled.h"
 
-namespace rwa3{
+namespace fp{
 	/**
  * @brief Method definition for derived class : SpeedUp
  * @param Speed of the robot
@@ -17,6 +17,7 @@ namespace rwa3{
  * */
 	void LandBasedWheeled::GoUp(int x_, int y_){
 		std::cout << "LandBasedWheeled::GoUp is called\n";
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : GoDown
@@ -25,6 +26,9 @@ namespace rwa3{
  * */
 	void LandBasedWheeled:: GoDown(int x_, int y_){
 		std::cout << "LandBasedWheeled::GoDown is called\n";
+		API::turnLeft();
+		API::turnLeft();
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : TurnLeft
@@ -33,6 +37,7 @@ namespace rwa3{
  * */
 	void LandBasedWheeled::TurnLeft(int x_, int y_){
 		std::cout << "LandBasedWheeled::TurnLeft is called\n";
+		API::turnLeft();
 		} 
 /**
  * @brief Method definition for derived class : TurnRight
@@ -41,6 +46,7 @@ namespace rwa3{
  * */
 	void LandBasedWheeled::TurnRight(int x_, int y_){
 		std::cout << "LandBasedWheeled::TurnRight is called\n";
+		API::turnRight();
 		} 
 /**
  * @brief Method definition for derived class : PickUp
