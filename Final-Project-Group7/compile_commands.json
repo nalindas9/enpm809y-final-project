@@ -1,7 +1,31 @@
 [{
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.cpp",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
   "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.h",
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
   "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.h",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
  }, {
   "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.cpp",
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
@@ -11,25 +35,13 @@
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
   "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
  }, {
-  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h",
-  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
-  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
- }, {
-  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp",
-  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
-  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
- }, {
-  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp",
-  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
-  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
- }, {
-  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h",
-  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
-  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
- }, {
   "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedTracked/LandBasedTracked.cpp",
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
   "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedTracked/LandBasedTracked.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedTracked/LandBasedTracked.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
+ }, {
+  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp",
+  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
+  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
  }, {
   "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedTracked/LandBasedTracked.h",
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
@@ -38,8 +50,4 @@
   "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.cpp",
   "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
   "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedWheeled/LandBasedWheeled.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
- }, {
-  "file": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp",
-  "directory": "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7",
-  "command": "clang  -c \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp\" -o \"/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedRobot/LandBasedRobot.cpp\".o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -g  -O0  -Wall"
  }]

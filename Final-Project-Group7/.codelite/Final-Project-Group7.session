@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace">
-  <int Value="4" Name="m_selectedTab"/>
+  <int Value="10" Name="m_selectedTab"/>
   <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/LandBasedTracked/LandBasedTracked.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="1" Name="CurrentLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -34,14 +34,14 @@
     <TabInfo>
       <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="8" Name="CurrentLine"/>
+      <int Value="12" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="13" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -77,6 +77,20 @@
       <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="9" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.h" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
