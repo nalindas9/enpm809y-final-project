@@ -1,4 +1,5 @@
 #pragma once
+
 #include "../API/API.h"
 namespace fp
 {
@@ -6,11 +7,18 @@ namespace fp
 class Maze
 {
 public:
-	static bool up_wall[16][16]; // Marix to store whether the node has wall in front or not
-	static bool right_wall[16][16]; // Marix to store whether the node has wall in right or not
-	static bool down_wall[16][16]; // Marix to store whether the node has wall in back or not
-	static bool left_wall[16][16]; // Marix to store whether the node has wall in left or not
-	void ReadMaze();
+    int x;
+    int y;
+	static bool north_wall; // Marix to store whether the node has wall in front or not
+	static bool east_wall; // Marix to store whether the node has wall in right or not
+	static bool west_wall; // Marix to store whether the node has wall in back or not
+	static bool south_wall; // Marix to store whether the node has wall in left or not
+    int North[16][16]{};
+    int South[16][16]{};
+    int East[16][16]{};
+    int West[16][16]{};
+    
+	void ReadMaze(int x,int y,char direction);
 };
 
 }
