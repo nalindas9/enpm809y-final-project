@@ -16,69 +16,66 @@ fp::Maze::ReadMaze(x,y,d) // Inputs (x,y) position and output from getDirection(
 //            API::turnRight();
 //            maze.south_wall = API::wallRight();
 //            API::turnLeft();
-            
-                  if(d == 'n'){
-                      maze.North[x][y] = API::wallFront();
-                      maze.East[x][y] = API::wallRight();
-                      maze.West[x][y] = API::wallLeft();
+            maze.x = x;
+            maze.y = y;
+            maze.dir = d;
+                  if(maze.dir == 'n'){
+                      maze.North[maze.x][maze.y] = API::wallFront();
+                      maze.East[maze.x][maze.y] = API::wallRight();
+                      maze.West[maze.x][maze.y] = API::wallLeft();
                       if(API::wallFront()){
-                            API::setWall(x,y,'n');
+                            API::setWall(maze.x,maze.y,'n');
                           }
                       if(API::wallRight()){
-                            API::setWall(x,y,'e');
+                            API::setWall(maze.x,maze.y,'e');
                           }
                       if(API::wallLeft()){
-                            API::setWall(x,y,'w');
+                            API::setWall(maze.x,maze.y,'w');
                           }
                   }
-                  if(d == 'e'){
-                      maze.North[x][y] = API::wallLeft()
-                      maze.East[x][y] = API::wallFront();
-                      maze.South[x][y] = API::wallRight();
+                  if(maze.dir == 'e'){
+                      maze.North[maze.x][maze.y] = API::wallLeft()
+                      maze.East[maze.x][maze.y] = API::wallFront();
+                      maze.South[maze.x][maze.y] = API::wallRight();
                       if(API::wallFront()){
-                            API::setWall(x,y,'e');
+                            API::setWall(maze.x,maze.y,'e');
                           }
                       if(API::wallRight()){
-                            API::setWall(x,y,'s');
+                            API::setWall(maze.x,maze.y,'s');
                           }
                       if(API::wallLeft()){
-                            API::setWall(x,y,'n');
+                            API::setWall(maze.x,maze.y,'n');
                           }
                   }
-                  if(d == 'w'){
-                      maze.West[x][y] = API::wallFront();
-                      maze.North[x][y] = API::wallRight();
-                      maze.South[x][y] = API::wallLeft();
+                  if(maze.dir == 'w'){
+                      maze.West[maze.x][maze.y] = API::wallFront();
+                      maze.North[maze.x][maze.y] = API::wallRight();
+                      maze.South[maze.x][maze.y] = API::wallLeft();
                       if(API::wallFront()){
-                            API::setWall(x,y,'w');
+                            API::setWall(maze.x,maze.y,'w');
                           }
                       if(API::wallRight()){
-                            API::setWall(x,y,'n');
+                            API::setWall(maze.x,maze.y,'n');
                           }
                       if(API::wallLeft()){
-                            API::setWall(x,y,'s');
+                            API::setWall(maze.x,maze.y,'s');
                           }
                   }
-                  if(d == 's'){
-                      maze.South[x][y] = API::wallFront();
-                      maze.East[x][y] = API::wallLeft();
-                      maze.West[x][y] = API::wallRight();
+                  if(maze.dir == 's'){
+                      maze.South[maze.x][maze.y] = API::wallFront();
+                      maze.East[maze.x][maze.y] = API::wallLeft();
+                      maze.West[maze.x][maze.y] = API::wallRight();
                       if(API::wallFront()){
-                            API::setWall(x,y,'s');
+                            API::setWall(maze.x,maze.y,'s');
                           }
                       if(API::wallRight()){
-                            API::setWall(x,y,'w');
+                            API::setWall(maze.x,maze.y,'w');
                           }
                       if(API::wallLeft()){
-                            API::setWall(x,y,'e');
+                            API::setWall(maze.x,maze.y,'e');
                           }
                   }
-                  }
-                  
-                  
-                  
-                  
-                  
+}
                   
                   }
                   }

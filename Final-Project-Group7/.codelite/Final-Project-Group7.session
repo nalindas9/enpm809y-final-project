@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace">
-  <int Value="2" Name="m_selectedTab"/>
+  <int Value="3" Name="m_selectedTab"/>
   <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.cpp" Name="FileName"/>
-      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="42" Name="FirstVisibleLine"/>
       <int Value="80" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="14" Name="FirstVisibleLine"/>
       <int Value="17" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp" Name="FileName"/>
-      <int Value="45" Name="FirstVisibleLine"/>
-      <int Value="66" Name="CurrentLine"/>
+      <int Value="3" Name="FirstVisibleLine"/>
+      <int Value="65" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="18" Name="CurrentLine"/>
+      <int Value="12" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
