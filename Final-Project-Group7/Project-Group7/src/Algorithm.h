@@ -1,4 +1,5 @@
 #pragma once
+#include <../Maze/Maze.h>
 
 namespace fp
 {
