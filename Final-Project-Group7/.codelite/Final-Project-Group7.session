@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="2" Name="m_selectedTab"/>
   <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Final-Project-Group7.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -19,8 +19,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/akhopkar/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Maze/Maze.cpp" Name="FileName"/>
-      <int Value="60" Name="FirstVisibleLine"/>
-      <int Value="82" Name="CurrentLine"/>
+      <int Value="64" Name="FirstVisibleLine"/>
+      <int Value="84" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
