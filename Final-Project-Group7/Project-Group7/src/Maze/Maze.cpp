@@ -1,5 +1,6 @@
 #include "Maze.h"
 #include "../API/API.h"
+#include <vector>
 
 using namespace fp;
 
@@ -76,18 +77,10 @@ fp::Maze::ReadMaze(x,y,d) // Inputs (x,y) position and output from getDirection(
                           }
                   }
 }
-                  
-                  }
-                  }
-              }
-            
-            
-            }
-		}
+// this function should modify all the four static wall matrix.
+fp::Maze::colorPath(&X,&Y){
+    for(auto num:X)
+        API::setColor(X[num],Y[num],'b'); //Sets color to the path x,y as blue. Note: the index of x and y are considered to be the same and thus, iterating variable doesnt matter
         
-	}
-	// this function should modify all the four static wall matrix.
-	
 }
-
 

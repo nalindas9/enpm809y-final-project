@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../API/API.h"
+#include <vector>
+
 namespace fp
 {
 
@@ -17,6 +19,7 @@ public:
     int West[16][16]{};
     
 	void ReadMaze(int x,int y,char direction);
+    void colorPath(std::vector<int> &X, std::vector<int> &Y);
 };
 
 }
