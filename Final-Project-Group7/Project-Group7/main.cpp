@@ -1,12 +1,14 @@
 #include <stdio.h>
-#include "LandBasedRobot/LandBasedRobot.h"
-#include "LandBasedTracked/LandBasedTracked.h"
-#include "LandBasedWheeled/LandBasedWheeled.h"
-#include "Maze/Maze.h"
-#include "API/API.h"
+#include "src/LandBasedRobot/LandBasedRobot.h"
+#include "src/LandBasedTracked/LandBasedTracked.h"
+#include "src/LandBasedWheeled/LandBasedWheeled.h"
+#include "src/Maze/Maze.h"
+#include "src/API/API.h"
+#include "src/Algorithm/Algorithm.h"
 
-int main(int argc, char **argv)
+int main()
 {
-	printf("hello world\n");
-	return 0;
+	fp::Algorithm algo;
+	fp::Maze maze;
+	algo.GenerateSequence(maze,0,0,'n');
 }

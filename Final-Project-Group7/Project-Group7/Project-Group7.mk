@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Raghav
-Date                   :=29/11/19
+Date                   :=01/12/19
 CodeLitePath           :=/home/raghav/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_API_API.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Maze_Maze.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedTracked_LandBasedTracked.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedWheeled_LandBasedWheeled.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedRobot_LandBasedRobot.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_API_API.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Maze_Maze.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedTracked_LandBasedTracked.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedWheeled_LandBasedWheeled.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_LandBasedRobot_LandBasedRobot.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(ObjectSuffix): src/Algorithm/Algorithm.cpp $(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/Algorithm/Algorithm.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(DependSuffix): src/Algorithm/Algorithm.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(DependSuffix) -MM src/Algorithm/Algorithm.cpp
+
+$(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(PreprocessSuffix): src/Algorithm/Algorithm.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Algorithm_Algorithm.cpp$(PreprocessSuffix) src/Algorithm/Algorithm.cpp
+
 $(IntermediateDirectory)/src_API_API.cpp$(ObjectSuffix): src/API/API.cpp $(IntermediateDirectory)/src_API_API.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/raghav/Desktop/ENPM809Y Final Project/enpm809y-final-project/Final-Project-Group7/Project-Group7/src/API/API.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_API_API.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_API_API.cpp$(DependSuffix): src/API/API.cpp

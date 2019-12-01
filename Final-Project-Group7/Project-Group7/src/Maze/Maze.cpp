@@ -2,12 +2,10 @@
 #include "../API/API.h"
 #include <vector>
 
-using namespace fp;
-
-Maze maze;
+// Maze maze;
 //Create for 2D vectors for North, South, East and West
-
-fp::Maze::ReadMaze(x,y,d) // Inputs (x,y) position and output from getDirection() of the robot NOTE: The getDirection() must return direction according to the world frame
+//
+void fp::Maze::ReadMaze(int x,int y,char d) // Inputs (x,y) position and output from getDirection() of the robot NOTE: The getDirection() must return direction according to the world frame
 {
 	
 //			
@@ -17,70 +15,73 @@ fp::Maze::ReadMaze(x,y,d) // Inputs (x,y) position and output from getDirection(
 //            API::turnRight();
 //            maze.south_wall = API::wallRight();
 //            API::turnLeft();
-            maze.x = x;
-            maze.y = y;
-            maze.dir = d;
-                  if(maze.dir == 'n'){
-                      maze.North[maze.x][maze.y] = API::wallFront();
-                      maze.East[maze.x][maze.y] = API::wallRight();
-                      maze.West[maze.x][maze.y] = API::wallLeft();
-                      if(API::wallFront()){
-                            API::setWall(maze.x,maze.y,'n');
+//            x = x;
+//            y = y;
+            dir = d;
+                  if(dir == 'n'){
+//                      North[x][y] = API::wallFront();
+//                      East[x][y] = API::wallRight();
+//                      West[x][y] = API::wallLeft();
+                      if(API::wallFront()==true){
+                            API::setWall(x,y,'n');
+							North[x][y] = true;
                           }
                       if(API::wallRight()){
-                            API::setWall(maze.x,maze.y,'e');
+                            API::setWall(x,y,'e');
+							East[x][y] = true;
                           }
                       if(API::wallLeft()){
-                            API::setWall(maze.x,maze.y,'w');
+                            API::setWall(x,y,'w');
+							West[x][y] = true;
                           }
                   }
-                  if(maze.dir == 'e'){
-                      maze.North[maze.x][maze.y] = API::wallLeft()
-                      maze.East[maze.x][maze.y] = API::wallFront();
-                      maze.South[maze.x][maze.y] = API::wallRight();
+                  if(dir == 'e'){
+                      North[x][y] = API::wallLeft();
+                      East[x][y] = API::wallFront();
+                      South[x][y] = API::wallRight();
                       if(API::wallFront()){
-                            API::setWall(maze.x,maze.y,'e');
+                            API::setWall(x,y,'e');
                           }
                       if(API::wallRight()){
-                            API::setWall(maze.x,maze.y,'s');
+                            API::setWall(x,y,'s');
                           }
                       if(API::wallLeft()){
-                            API::setWall(maze.x,maze.y,'n');
+                            API::setWall(x,y,'n');
                           }
                   }
-                  if(maze.dir == 'w'){
-                      maze.West[maze.x][maze.y] = API::wallFront();
-                      maze.North[maze.x][maze.y] = API::wallRight();
-                      maze.South[maze.x][maze.y] = API::wallLeft();
+                  if(dir == 'w'){
+                      West[x][y] = API::wallFront();
+                      North[x][y] = API::wallRight();
+                      South[x][y] = API::wallLeft();
                       if(API::wallFront()){
-                            API::setWall(maze.x,maze.y,'w');
+                            API::setWall(x,y,'w');
                           }
                       if(API::wallRight()){
-                            API::setWall(maze.x,maze.y,'n');
+                            API::setWall(x,y,'n');
                           }
                       if(API::wallLeft()){
-                            API::setWall(maze.x,maze.y,'s');
+                            API::setWall(x,y,'s');
                           }
                   }
-                  if(maze.dir == 's'){
-                      maze.South[maze.x][maze.y] = API::wallFront();
-                      maze.East[maze.x][maze.y] = API::wallLeft();
-                      maze.West[maze.x][maze.y] = API::wallRight();
+                  if(dir == 's'){
+                      South[x][y] = API::wallFront();
+                      East[x][y] = API::wallLeft();
+                      West[x][y] = API::wallRight();
                       if(API::wallFront()){
-                            API::setWall(maze.x,maze.y,'s');
+                            API::setWall(x,y,'s');
                           }
                       if(API::wallRight()){
-                            API::setWall(maze.x,maze.y,'w');
+                            API::setWall(x,y,'w');
                           }
                       if(API::wallLeft()){
-                            API::setWall(maze.x,maze.y,'e');
+                            API::setWall(x,y,'e');
                           }
                   }
 }
 // this function should modify all the four static wall matrix.
-fp::Maze::colorPath(&X,&Y){
-    for(auto num:X)
-        API::setColor(X[num],Y[num],'b'); //Sets color to the path x,y as blue. Note: the index of x and y are considered to be the same and thus, iterating variable doesnt matter
-        
-}
+//void fp::Maze::colorPath(std::vector<int> &X, std::vector<int> &Y){
+//    for(auto num:X)
+//        API::setColor(X[num],Y[num],'b'); //Sets color to the path x,y as blue. Note: the index of x and y are considered to be the same and thus, iterating variable doesnt matter
+//        
+//}
 

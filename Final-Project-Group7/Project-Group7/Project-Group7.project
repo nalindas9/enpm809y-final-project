@@ -94,8 +94,8 @@
   </Settings>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Algorithm">
-      <File Name="src/Algorithm.cpp"/>
-      <File Name="src/Algorithm.h"/>
+      <File Name="src/Algorithm/Algorithm.cpp"/>
+      <File Name="src/Algorithm/Algorithm.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Maze">
       <File Name="src/Maze/Maze.cpp"/>
