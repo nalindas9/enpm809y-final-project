@@ -16,54 +16,114 @@ namespace fp{
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedWheeled::GoUp(int x_, int y_){
-		std::cout << "LandBasedWheeled::GoUp is called\n";
-		API::moveForward();
-		} 
+	void LandBasedWheeled::MoveForward(){
+		if(LandBasedWheeled::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			y_++;
+		}
+		else if(LandBasedWheeled::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			x_++;
+		}
+		else if(LandBasedWheeled::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			x_--;
+		}
+		else if(LandBasedWheeled::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			y_--;
+		}
+		
+		}
 /**
  * @brief Method definition for derived class : GoDown
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedWheeled:: GoDown(int x_, int y_){
-		std::cout << "LandBasedWheeled::GoDown is called\n";
-//		API::turnLeft();
-//		API::turnLeft();
-//		API::moveForward();
-		} 
+//	void LandBasedWheeled:: GoDown(int x_, int y_){
+//		std::cout << "LandBasedWheeled::GoDown is called\n";
+////		API::turnLeft();
+////		API::turnLeft();
+////		API::moveForward();
+//		} 
 /**
  * @brief Method definition for derived class : TurnLeft
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedWheeled::TurnLeft(int x_, int y_){
-		std::cout << "LandBasedWheeled::TurnLeft is called\n";
-		API::turnLeft();
-		API::moveForward();
-		} 
+	void LandBasedWheeled::TurnLeft(){
+		if(LandBasedWheeled::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='s';
+		}
+		else if(LandBasedWheeled::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='w';
+		}
+		else if(LandBasedWheeled::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='n';
+		}
+		else if(LandBasedWheeled::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='e';
+		}
+		}
 /**
  * @brief Method definition for derived class : TurnRight
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedWheeled::TurnRight(int x_, int y_){
-		std::cout << "LandBasedWheeled::TurnRight is called\n";
-		API::turnRight();
-		API::moveForward();
-		} 
+	void LandBasedWheeled::TurnRight(){
+		if(LandBasedWheeled::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='e';
+		}
+		else if(LandBasedWheeled::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='s';
+		}
+		else if(LandBasedWheeled::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='n';
+		}
+		else if(LandBasedWheeled::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='w';
+		}
+		}
+int LandBasedWheeled::get_x() const{
+	return x_;
+}
+int LandBasedWheeled::get_y() const {
+	return y_;
+} 
+char LandBasedWheeled::GetDirection(){ return direction_;}
 /**
  * @brief Method definition for derived class : PickUp
  * @param Pick Up from the robotic arm
  * */
-	void LandBasedWheeled::PickUp(std::string){
-		std::cout << "LandBasedWheeled::Pickup is called\n";
-		} 
-/**
- * @brief Method definition for derived class : Release
- * @param Release from the robotic arm
- * */
-	void LandBasedWheeled::Release(std::string){
-		std::cout << "LandBasedWheeled::Release is called\n";
-		}
+//	void LandBasedWheeled::PickUp(std::string){
+//		std::cout << "LandBasedWheeled::Pickup is called\n";
+//		} 
+///**
+// * @brief Method definition for derived class : Release
+// * @param Release from the robotic arm
+// * */
+//	void LandBasedWheeled::Release(std::string){
+//		std::cout << "LandBasedWheeled::Release is called\n";
+//		}
 
 	}

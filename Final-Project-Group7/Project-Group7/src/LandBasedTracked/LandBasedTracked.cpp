@@ -9,27 +9,27 @@ namespace fp{
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedTracked::GoUp(int x_, int y_){
+	void LandBasedTracked::MoveForward(){
 		std::cout << "LandBasedTracked::GoUp is called\n";
-		API::moveForward();
+//		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : GoDown
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedTracked:: GoDown(int x_, int y_){
-		std::cout << "LandBasedTracked::GoDown is called\n";
-		API::turnLeft();
-		API::turnLeft();
-		API::moveForward();
-		} 
+//	void LandBasedTracked:: GoDown(){
+//		std::cout << "LandBasedTracked::GoDown is called\n";
+//		API::turnLeft();
+//		API::turnLeft();
+//		API::moveForward();
+//		} 
 /**
  * @brief Method definition for derived class : TurnLeft
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedTracked::TurnLeft(int x_, int y_){
+	void LandBasedTracked::TurnLeft(){
 		std::cout << "LandBasedTracked::TurnLeft is called\n";
 		API::turnLeft();
 		} 
@@ -38,22 +38,29 @@ namespace fp{
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-	void LandBasedTracked::TurnRight(int x_, int y_){
+	void LandBasedTracked::TurnRight(){
 		std::cout << "LandBasedTracked::TurnRight is called\n";
 		API::turnRight();
 		} 
-/**
- * @brief Method definition for derived class : PickUp
- * @param Pick up from the robotic arm
- * */
-	void LandBasedTracked::PickUp(std::string){
-		std::cout << "LandBasedTracked::Pickup is called\n";
-		} 
-/**
- * @brief Method definition for derived class : Release
- * @param Release from the robotic arm
- * */
-	void LandBasedTracked::Release(std::string){
-		std::cout << "LandBasedTracked::Release is called\n";
-		}
+int LandBasedTracked::get_x() const{
+	return x_;
+}
+int LandBasedTracked::get_y() const {
+	return y_;
+} 
+char LandBasedTracked::GetDirection(){ return direction_;}
+///**
+// * @brief Method definition for derived class : PickUp
+// * @param Pick up from the robotic arm
+// * */
+//	void LandBasedTracked::PickUp(std::string){
+//		std::cout << "LandBasedTracked::Pickup is called\n";
+//		} 
+///**
+// * @brief Method definition for derived class : Release
+// * @param Release from the robotic arm
+// * */
+//	void LandBasedTracked::Release(std::string){
+//		std::cout << "LandBasedTracked::Release is called\n";
+//		}
 } 

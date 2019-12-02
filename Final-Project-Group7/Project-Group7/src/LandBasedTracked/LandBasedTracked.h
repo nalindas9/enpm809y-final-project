@@ -15,34 +15,37 @@ class LandBasedTracked : public LandBasedRobot
 		
 	public:
 	// Method Prototypes
-	virtual void GoUp(int , int) override;
-	virtual void GoDown(int , int)override;
-	virtual void TurnLeft(int , int)override;
-	virtual void TurnRight(int , int)override;
-	virtual void PickUp(std::string)override;
-	virtual void Release(std::string)override;
+	virtual void MoveForward() override;
+	virtual char GetDirection() override;
+	//virtual void GoDown()override;
+	virtual void TurnLeft()override;
+	virtual void TurnRight()override;
+	int get_x() const;
+	int get_y() const;
+//	virtual void PickUp(std::string)override;
+//	virtual void Release(std::string)override;
 	
 	/**
  * @brief
     Accesors and Mutators to access and modify protected attributes of derived class
  * */
  
- /**
- * @brief Accesors to access protected attributes of derived class i.e. track_type
- * @return Type of track mounted on the robot
- * */
-	std::string get_track_type() const{
-		return *track_type;
-	}
-	
-	/**
- * @brief Mutators modify/set protected attributes of derived class i.e. track_type
- * @param Type of track mounted on the robot
- * */
-	void set_track_type(std::string track_of_type){
-		*track_type = track_of_type;
-	}
-	
+// /**
+// * @brief Accesors to access protected attributes of derived class i.e. track_type
+// * @return Type of track mounted on the robot
+// * */
+//	std::string get_track_type() const{
+//		return *track_type;
+//	}
+//	
+//	/**
+// * @brief Mutators modify/set protected attributes of derived class i.e. track_type
+// * @param Type of track mounted on the robot
+// * */
+//	void set_track_type(std::string track_of_type){
+//		*track_type = track_of_type;
+//	}
+//	
 	/**
  * @brief Derived Constructor with default attribute values
  * @param Name of the robot
@@ -59,15 +62,15 @@ class LandBasedTracked : public LandBasedRobot
 		track_type = new std::string(track_of_type);
 		}
 		
-	/**
- * @brief Deep Copy Constructor and Destructor for Derived class
- * @param Refrence to the Object of the derived class
- * */
-	LandBasedTracked(const LandBasedTracked &obj)
-		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y(), obj.get_direction()){
-		track_type = new std::string;
-		*track_type=obj.get_track_type();
-	}
+//	/**
+// * @brief Deep Copy Constructor and Destructor for Derived class
+// * @param Refrence to the Object of the derived class
+// * */
+//	LandBasedTracked(const LandBasedTracked &obj)
+//		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y(), obj.get_direction()){
+//		track_type = new std::string;
+//		*track_type=obj.get_track_type();
+//	}
 /**
  * @brief Destructor of the derived class LandBasedTracked
  * */
