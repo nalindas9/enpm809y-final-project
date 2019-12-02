@@ -200,7 +200,7 @@ void fp::Algorithm::GenerateSequence(fp::Maze maze_algo, fp::LandBasedWheeled ro
   temp_node.cx = Start_x;
   temp_node.cy = Start_y;
   temp_node.dir = Start_dir;
-  cerr<<"Starting x : "<<Start_x<<" y : "<<Start_y<<" dir : "<<Start_dir<<endl;
+//  cerr<<"Starting x : "<<Start_x<<" y : "<<Start_y<<" dir : "<<Start_dir<<endl;
   temp_node.actions = "";
   seen[temp_node.cx][temp_node.cy] = 1;
   queue.push_back(temp_node);
@@ -229,33 +229,33 @@ void fp::Algorithm::GenerateSequence(fp::Maze maze_algo, fp::LandBasedWheeled ro
       cout<<"goal not found";
   }
   else if (flag==true){
-       cerr<<"-----------------------"<<endl;
-      
-       for(int l=0;l<queue.size();l++){
-       cerr<<"("<<queue[l].px<<","<<queue[l].py<<")  ("<<queue[l].cx<<","<<queue[l].cy<<")   "<<queue[l].dir<<"  "<<queue[l].actions<<endl;
-       for(int m=4;m<=0;m++){
-           for(int n=0;n<5;n++)
-           cout<<seen[n][m]<<" ";
-           cout<<endl;
-       }
-   }
-   cerr<<"-----------------------"<<endl;
-cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
+//       cerr<<"-----------------------"<<endl;
+//      
+//       for(int l=0;l<queue.size();l++){
+//       cerr<<"("<<queue[l].px<<","<<queue[l].py<<")  ("<<queue[l].cx<<","<<queue[l].cy<<")   "<<queue[l].dir<<"  "<<queue[l].actions<<endl;
+//       for(int m=4;m<=0;m++){
+//           for(int n=0;n<5;n++)
+//           cout<<seen[n][m]<<" ";
+//           cout<<endl;
+//       }
+//   }
+//   cerr<<"-----------------------"<<endl;
+//cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 
       vector<int> X;
       vector<int> Y;
 	  vector<char> direc;
       vector<string> Actions;
-      X.push_back(queue[queue.size()-1].cx);
-      Y.push_back(queue[queue.size()-1].cy);
+//      X.push_back(queue[queue.size()-1].cx);
+//      Y.push_back(queue[queue.size()-1].cy);
 //	  Actions.push_back("");
 //	  direc.push_back('a');
       X.push_back(queue[queue.size()-1].px);
       Y.push_back(queue[queue.size()-1].py);
 	  Actions.push_back(queue[queue.size()-1].actions);
 	  direc.push_back(queue[queue.size()-1].dir);
-	  cerr<<" Direction appended : "<<queue[queue.size()-1].dir<<endl;
-      cerr<<" Direction in direc : "<<direc[0]<<endl;
+//	  cerr<<" Direction appended : "<<queue[queue.size()-1].dir<<endl;
+//      cerr<<" Direction in direc : "<<direc[0]<<endl;
       int a=queue[queue.size()-1].px;
       int b=queue[queue.size()-1].py;
       int i=queue.size()-1;
@@ -276,11 +276,11 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
           if(a==Start_x && b==Start_y){
               break;
           }
-		  direc.push_back('n');
+		  //direc.push_back('n');
         //   cout<<" b = "<<b<<" i = "<<i<<endl; 
       }
-	  X.pop_back();
-	  Y.pop_back();
+//	  X.pop_back();
+//	  Y.pop_back();
       std::reverse(X.begin(),X.end());
 	  std::reverse(direc.begin(),direc.end());
       std::reverse(Y.begin(),Y.end());
@@ -290,17 +290,17 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
     //   }
     //   cout<<endl;
       std::reverse(Actions.begin(),Actions.end());
-	  cerr<<"============="<<endl;
-	  for(int i=0;i<direc.size();i++){
-		  cerr<<"Direc ["<<i<<"] = "<<direc[i]<<endl;
-	  }
+//	  cerr<<"============="<<endl;
+//	  for(int i=0;i<direc.size();i++){
+//		  cerr<<"Direc ["<<i<<"] = "<<direc[i]<<endl;
+//	  }
 	  maze_algo.colorPath(X,Y);
+	  cerr<<"============="<<endl;
 	  for(int i=0;i<Actions.size();i++){
 		  cerr<<"("<<X[i]<<","<<Y[i]<<")	"<<direc[i]<<"	"<<Actions[i]<<endl;
-		  
 	  }
-	  
-	  cerr<<" Action Size : "<<Actions.size()<<endl;
+//	  cerr<<"============="<<endl;
+//	  cerr<<" Action Size : "<<Actions.size()<<endl;
       for (int i=0;i<Actions.size();i++){
           if(Actions[i]=="Go Forward"){
 			  maze_algo.ReadMaze(X[i],Y[i],direc[i]);
@@ -335,8 +335,16 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 //	  }
   
 			  if(direc[i]=='n'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<" wall check : "<<maze_algo.North[X[i]][Y[i]]<<endl;
-			  if(maze_algo.North[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<" wall check : "<<maze_algo.North[X[i]][Y[i]]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 's';
+				  break;
+			  }
+			  else if(maze_algo.North[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
@@ -347,8 +355,16 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='e'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.East[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.North[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1 && maze_algo.East[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'w';
+				  break;
+			  }
+			  else if(maze_algo.East[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
@@ -359,8 +375,16 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='w'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.West[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.North[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'e';
+				  break;
+			  }
+			  else if(maze_algo.West[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
@@ -370,9 +394,17 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 				  fp::API::moveForward();
 			  }
 			  }
-			  else if(direc[i]=='s' && maze_algo.South[X[i]][Y[i]]!=1){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.South[X[i]][Y[i]]==1){
+			  else if(direc[i]=='s'){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'n';
+				  break;
+			  }
+			  else if(maze_algo.South[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
@@ -386,42 +418,51 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  
 		  else if(Actions[i]=="Turn Left"){
 			  maze_algo.ReadMaze(X[i],Y[i],direc[i]);
-			  cerr<<"\n Display Maze matrix : "<<endl;
-	  cerr<<" North : "<<endl;
-	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.North[k][l] <<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" East : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.East[k][l]<<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" South : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.South[k][l] <<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" West : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.West[k][l] <<" ";
-		  }
-		  cerr<<endl;
-	  }
-  
+//			  cerr<<"\n Display Maze matrix : "<<endl;
+//	  cerr<<" North : "<<endl;
+//	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.North[k][l] <<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" East : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.East[k][l]<<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" South : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.South[k][l] <<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" West : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.West[k][l] <<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//  
 			  if(direc[i]=='w'){
-				cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.South[X[i]][Y[i]]==1){
+//				cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.North[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'e';
+				  break;
+			  }
+			  else if(maze_algo.South[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnLeft();
 				  break;
 			  }
 			  else{
@@ -430,11 +471,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='n'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.West[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 's';
+				  break;
+			  }
+			  else if(maze_algo.West[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnLeft();
 				  break;
 			  }
 			  else{
@@ -443,11 +493,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='e'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.North[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'w';
+				  break;
+			  }
+			  else if(maze_algo.North[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnLeft();
 				  break;
 			  }
 			  else{
@@ -456,11 +515,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='s'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.East[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'n';
+				  break;
+			  }
+			  else if(maze_algo.East[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnLeft();
 				  break;
 			  }
 			  else{
@@ -472,42 +540,51 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 		  
 		  else if(Actions[i]=="Turn Right"){
 			  maze_algo.ReadMaze(X[i],Y[i],direc[i]);
-			  cerr<<"\n Display Maze matrix : "<<endl;
-	  cerr<<" North : "<<endl;
-	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.North[k][l] <<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" East : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.East[k][l]<<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" South : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.South[k][l] <<" ";
-		  }
-		  cerr<<endl;
-	  }
-	  cerr<<" West : "<<endl;
-	  	  for(int k=0;k<16;k++){
-		  for (int l=0;l<16;l++){
-			  cerr<<maze_algo.West[k][l]<<" ";
-		  }
-		  cerr<<endl;
-	  }
+//			  cerr<<"\n Display Maze matrix : "<<endl;
+//	  cerr<<" North : "<<endl;
+//	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.North[k][l] <<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" East : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.East[k][l]<<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" South : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.South[k][l] <<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
+//	  cerr<<" West : "<<endl;
+//	  	  for(int k=0;k<16;k++){
+//		  for (int l=0;l<16;l++){
+//			  cerr<<maze_algo.West[k][l]<<" ";
+//		  }
+//		  cerr<<endl;
+//	  }
   
 			  if(direc[i]=='n'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.East[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 's';
+				  break;
+			  }
+			  else if(maze_algo.East[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  ///fp::API::turnRight();
 				  break;
 			  }
 			  else{
@@ -516,11 +593,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='e'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.South[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'w';
+				  break;
+			  }
+			  else if(maze_algo.South[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnRight();
 				  break;
 			  }
 			  else{
@@ -529,11 +615,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='s'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.West[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.East[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.South[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'n';
+				  break;
+			  }
+			  else if(maze_algo.West[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnRight();
 				  break;
 			  }
 			  else{
@@ -542,11 +637,20 @@ cerr<<" Direction last : "<<queue[queue.size()-1].dir<<endl;
 			  }
 			  }
 			  else if(direc[i]=='w'){
-			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
-			  if(maze_algo.North[X[i]][Y[i]]==1){
+//			  cerr<<"x : "<<X[i]<<" y : "<<Y[i]<<" dir : "<<direc[i]<<" Action : "<<Actions[i]<<endl;
+			  if (maze_algo.South[X[i]][Y[i]]==1 && maze_algo.West[X[i]][Y[i]]==1 && maze_algo.North[X[i]][Y[i]]==1){
+				  Start_x=X[i];
+				  Start_y=Y[i];
+				  fp::API::turnLeft();
+				  fp::API::turnLeft();
+				  Start_dir = 'e';
+				  break;
+			  }
+			  else if(maze_algo.North[X[i]][Y[i]]==1){
 				  Start_x=X[i];
 				  Start_y=Y[i];
 				  Start_dir=direc[i];
+				  //fp::API::turnRight();
 				  break;
 			  }
 			  else{
