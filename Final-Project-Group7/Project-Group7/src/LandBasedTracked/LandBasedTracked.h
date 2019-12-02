@@ -55,7 +55,7 @@ class LandBasedTracked : public LandBasedRobot
  * @param x coordinate of the robot in the maze
  * @param y coordinate of the robot in the maze 
  * */
-	LandBasedTracked(std::string name = "Husky", double speed = 34, double width = 22, std::string track_of_type = "Revolute", double length = 34, double height = 34, double capacity = 45, int x = 2, int y = 3):LandBasedRobot(name, speed, width, length, height, capacity, x, y){
+	LandBasedTracked(std::string name = "Husky", double speed = 34, double width = 22, std::string track_of_type = "Revolute", double length = 34, double height = 34, double capacity = 45, int x = 2, int y = 3, char direction = 'n'):LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction){
 		track_type = new std::string(track_of_type);
 		}
 		
@@ -64,7 +64,7 @@ class LandBasedTracked : public LandBasedRobot
  * @param Refrence to the Object of the derived class
  * */
 	LandBasedTracked(const LandBasedTracked &obj)
-		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y()){
+		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y(), obj.get_direction()){
 		track_type = new std::string;
 		*track_type=obj.get_track_type();
 	}

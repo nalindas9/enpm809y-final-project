@@ -19,6 +19,7 @@ protected:
 	double capacity_;   //Payload of the arm.
 	int x_;             //X coordinate of the robot in the maze.
 	int y_;             //Y coordinate of the robot in the maze.
+	char direction_;
 	
 public:
 	virtual void GoUp(int , int)  = 0;  //Move the robot up in the maze.
@@ -40,6 +41,14 @@ public:
  * */
 	std::string get_name() const{
 		return name_;
+	}
+	
+	 /**
+ * @brief Accessors to get the direction of the robot
+ * @return Direction of the robot
+ * */
+	char get_direction() const{
+		return direction_;
 	}
 
 /**
@@ -161,7 +170,7 @@ public:
  * @param x coordinate of the robot in the maze
  * @param y coordinate of the robot in the maze
  * */
-	LandBasedRobot(std::string name, double speed, double width, double length, double height, double capacity, int x, int y){
+	LandBasedRobot(std::string name, double speed, double width, double length, double height, double capacity, int x, int y, char direction){
 		name_ = name;
 		speed_ = speed;
 		width_ = width;
@@ -170,6 +179,7 @@ public:
 		capacity_ = capacity;
 		x_ = x;
 		y_ = y;
+		direction_ = direction;
 		}
 	/**
  * @brief Destructor for base class

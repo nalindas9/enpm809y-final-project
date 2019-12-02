@@ -27,9 +27,9 @@ namespace fp{
  * */
 	void LandBasedWheeled:: GoDown(int x_, int y_){
 		std::cout << "LandBasedWheeled::GoDown is called\n";
-		API::turnLeft();
-		API::turnLeft();
-		API::moveForward();
+//		API::turnLeft();
+//		API::turnLeft();
+//		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : TurnLeft
@@ -39,6 +39,7 @@ namespace fp{
 	void LandBasedWheeled::TurnLeft(int x_, int y_){
 		std::cout << "LandBasedWheeled::TurnLeft is called\n";
 		API::turnLeft();
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : TurnRight
@@ -48,6 +49,7 @@ namespace fp{
 	void LandBasedWheeled::TurnRight(int x_, int y_){
 		std::cout << "LandBasedWheeled::TurnRight is called\n";
 		API::turnRight();
+		API::moveForward();
 		} 
 /**
  * @brief Method definition for derived class : PickUp

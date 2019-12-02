@@ -10,5 +10,7 @@ int main()
 {
 	fp::Algorithm algo;
 	fp::Maze maze;
-	algo.GenerateSequence(maze,0,0,'n');
+	fp::LandBasedWheeled robot;
+	//maze.MazeInitialisation();
+	algo.GenerateSequence(maze,robot);
 }

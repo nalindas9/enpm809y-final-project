@@ -64,7 +64,7 @@ public:
  * @param Refrence to the Object of the derived class
  * */
 	LandBasedWheeled(const LandBasedWheeled &obj)
-		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y()){
+		:LandBasedRobot(obj.get_name(), obj.get_speed(), obj.get_width(), obj.get_length(), obj.get_height(), obj.get_capacity() , obj.get_x(),obj.get_y(), obj.get_direction()){
 		wheel_number=obj.wheel_number;
 		wheel_type = new std::string;
 		*wheel_type=obj.get_wheel_type();
@@ -82,7 +82,7 @@ public:
  * @param x coordinate of the robot in the maze
  * @param y coordinate of the robot in the maze 
  * */
-	LandBasedWheeled(std::string name = "Husky",  int wheel_num = 4, double speed = 34, std::string type_of_wheel = "Castor", double width = 22, double length = 34, double height = 34, double capacity = 45, int x = 2, int y = 3):LandBasedRobot(name, speed, width, length, height, capacity, x, y){
+	LandBasedWheeled(std::string name = "Husky",  int wheel_num = 4, double speed = 34, std::string type_of_wheel = "Castor", double width = 22, double length = 34, double height = 34, double capacity = 45, int x = 0, int y = 0, char direction = 'n'):LandBasedRobot(name, speed, width, length, height, capacity, x, y, direction){
 		wheel_type = new std::string(type_of_wheel);
 		wheel_number = wheel_num;
 		}
