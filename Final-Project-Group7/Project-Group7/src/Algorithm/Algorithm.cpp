@@ -361,12 +361,12 @@ void fp::Algorithm::GenerateSequence(fp::Maze& maze_algo, std::shared_ptr<fp::La
       std::reverse(fp::Algorithm::X.begin(),fp::Algorithm::X.end());
 	  std::reverse(fp::Algorithm::direc.begin(),fp::Algorithm::direc.end());
       std::reverse(fp::Algorithm::Y.begin(),fp::Algorithm::Y.end());
-	  cerr<<"Generate sequence ended with this sequence "<<endl;
-	  cerr<<"======================="<<endl;
-	  for(unsigned int i=0;i<fp::Algorithm::direc.size();i++){
-		  cerr<<"("<<fp::Algorithm::X[i]<<","<<fp::Algorithm::Y[i]<<")"<<"	Direc ["<<i<<"] = "<<fp::Algorithm::direc[i]<<endl;
-	  }
-	  cerr<<"======================="<<endl;
+//	  cerr<<"Generate sequence ended with this sequence "<<endl;
+//	  cerr<<"======================="<<endl;
+//	  for(unsigned int i=0;i<fp::Algorithm::direc.size();i++){
+//		  cerr<<"("<<fp::Algorithm::X[i]<<","<<fp::Algorithm::Y[i]<<")"<<"	Direc ["<<i<<"] = "<<fp::Algorithm::direc[i]<<endl;
+//	  }
+//	  cerr<<"======================="<<endl;
 	  //if(fp::Algorithm::X.size()==fp::Algorithm::direc.size()){ cerr<<"X .size and direc.size equal"<<endl;}
     //return flag;
   }
@@ -395,34 +395,34 @@ void fp::Algorithm::MoveRobot(fp::Maze& maze_algo, std::shared_ptr<fp::LandBased
 		
 //		std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 //		std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
-cerr<<"--------------------"<<endl;
+//std::cerr<<"--------------------"<<endl;
 		tempx = robot->get_x();
 		tempy = robot->get_y();
 		tempdir = robot->GetDirection();
-		cerr<<"MoveRobot : Maze was at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
-		cerr<<"Current X = "<<tempx<<" Y = "<<tempy<<" Direction = "<<tempdir<<endl;
+//		cerr<<"MoveRobot : Maze was at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
+//		cerr<<"Current X = "<<tempx<<" Y = "<<tempy<<" Direction = "<<tempdir<<endl;
 		maze_algo.ReadMaze(tempx,tempy,tempdir);
-		cerr<<"MoveRobot : Maze changed at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
+//		cerr<<"MoveRobot : Maze changed at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
 		// Movement if Robot is facing North direction
 		if(tempdir == 'n' && fp::Algorithm::direc[i] == 'n' && maze_algo.North[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->MoveForward();
 		}
 		else if(tempdir == 'n' && fp::Algorithm::direc[i] == 'e' && maze_algo.East[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnRight();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'n' && fp::Algorithm::direc[i] == 'w' && maze_algo.West[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'n' && fp::Algorithm::direc[i] == 's' && maze_algo.South[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->TurnLeft();
@@ -431,24 +431,24 @@ cerr<<"--------------------"<<endl;
 		
 		// Movement if Robot is facing East direction
 		else if(tempdir == 'e' && fp::Algorithm::direc[i] == 'e' && maze_algo.East[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->MoveForward();
 		}
 		else if(tempdir == 'e' && fp::Algorithm::direc[i] == 's' && maze_algo.South[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnRight();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'e' && fp::Algorithm::direc[i] == 'n' && maze_algo.North[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'e' && fp::Algorithm::direc[i] == 'w' && maze_algo.West[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->TurnLeft();
@@ -457,24 +457,24 @@ cerr<<"--------------------"<<endl;
 		
 		// Movement if Robot is facing South direction
 		else if(tempdir == 's' && fp::Algorithm::direc[i] == 's' && maze_algo.South[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->MoveForward();
 		}
 		else if(tempdir == 's' && fp::Algorithm::direc[i] == 'e' && maze_algo.East[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->MoveForward();
 		}
 		else if(tempdir == 's' && fp::Algorithm::direc[i] == 'w' && maze_algo.West[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnRight();
 			robot->MoveForward();
 		}
 		else if(tempdir == 's' && fp::Algorithm::direc[i] == 'n' && maze_algo.North[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->TurnLeft();
@@ -483,24 +483,24 @@ cerr<<"--------------------"<<endl;
 		
 		// Movement if Robot is facing East direction
 		else if(tempdir == 'w' && fp::Algorithm::direc[i] == 'w' && maze_algo.West[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->MoveForward();
 		}
 		else if(tempdir == 'w' && fp::Algorithm::direc[i] == 'n' && maze_algo.North[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnRight();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'w' && fp::Algorithm::direc[i] == 's' && maze_algo.South[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->MoveForward();
 		}
 		else if(tempdir == 'w' && fp::Algorithm::direc[i] == 'e' && maze_algo.East[tempx][tempy] == false){
-			std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
+			std::cerr << "Robot Current " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 			std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
 			robot->TurnLeft();
 			robot->TurnLeft();
@@ -513,15 +513,15 @@ cerr<<"--------------------"<<endl;
 //		cerr<<"MoveRobot : Maze was at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
 //		maze_algo.ReadMaze(tempx,tempy,tempdir);
 //		cerr<<"MoveRobot : Maze changed at ("<<tempx<<","<<tempy<<") Direction : "<<tempdir<<" as North = "<<maze_algo.North[tempx][tempy]<<", East = "<<maze_algo.East[tempx][tempy]<<", West = "<<maze_algo.West[tempx][tempy]<<", South = "<<maze_algo.South[tempx][tempy]<<endl;
-	cerr<<"----------------------------------"<<endl;
+//	cerr<<"----------------------------------"<<endl;
 	}
 }
 
 void fp::Algorithm::SolveMaze(fp::Maze& maze, std::shared_ptr<fp::LandBasedRobot> robot){
 	while(fp::Algorithm::goal_flag==true ){
-		cerr<<"Solve Maze started "<<endl;
+//		cerr<<"Solve Maze started "<<endl;
 		fp::Algorithm::GenerateSequence(maze,robot);
-		cerr<<"Generate sequence finished "<<endl;
+//		cerr<<"Generate sequence finished "<<endl;
 		fp::Algorithm::MoveRobot(maze,robot);
 		if ((robot->get_x() == 7 && robot->get_y() == 7) || (robot->get_x() == 7 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 7)) {
 			fp::API::clearAllColor();
