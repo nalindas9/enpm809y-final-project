@@ -44,12 +44,7 @@ namespace fp{
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
-//	void LandBasedWheeled:: GoDown(int x_, int y_){
-//		std::cout << "LandBasedWheeled::GoDown is called\n";
-////		API::turnLeft();
-////		API::turnLeft();
-////		API::moveForward();
-//		} 
+ 
 /**
  * @brief Method definition for derived class : TurnLeft
  * @param x position of the robot in the maze

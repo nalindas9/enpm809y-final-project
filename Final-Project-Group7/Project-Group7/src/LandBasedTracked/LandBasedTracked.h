@@ -17,14 +17,12 @@ class LandBasedTracked : public LandBasedRobot
 	// Method Prototypes
 	virtual void MoveForward() override;
 	virtual char GetDirection() override;
-	//virtual void GoDown()override;
+	
 	virtual void TurnLeft()override;
 	virtual void TurnRight()override;
 	int get_x() const;
 	int get_y() const;
-//	virtual void PickUp(std::string)override;
-//	virtual void Release(std::string)override;
-	
+
 	/**
  * @brief
     Accesors and Mutators to access and modify protected attributes of derived class

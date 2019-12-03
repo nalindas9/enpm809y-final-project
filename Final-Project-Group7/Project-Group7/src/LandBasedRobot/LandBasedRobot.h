@@ -23,11 +23,8 @@ protected:
 	
 public:
 	virtual void MoveForward()  = 0;  //Move the robot up in the maze.
-	//virtual void GoDown() = 0; //Move the robot down in the maze.
 	virtual void TurnLeft() = 0;  //Move the robot left in the maze.
 	virtual void TurnRight() = 0;  //Move the robot right in the maze.
-//	virtual void PickUp(std::string) = 0;   //Arm picks up an object.
-//	virtual void Release(std::string) = 0;  //Arm releases an object.
 	virtual int get_x() const = 0;
 	virtual int get_y() const = 0;
 	virtual char GetDirection() =0;

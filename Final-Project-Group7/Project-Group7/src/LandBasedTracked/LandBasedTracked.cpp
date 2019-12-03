@@ -10,28 +10,58 @@ namespace fp{
  * @param y position of the robot in the maze
  * */
 	void LandBasedTracked::MoveForward(){
-		std::cout << "LandBasedTracked::GoUp is called\n";
-//		API::moveForward();
+        if(LandBasedTracked::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			y_++;
+		}
+		else if(LandBasedTracked::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			x_++;
+		}
+		else if(LandBasedTracked::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			x_--;
+		}
+		else if(LandBasedTracked::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::moveForward();
+			y_--;
+		}
 		} 
 /**
  * @brief Method definition for derived class : GoDown
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
- * */
-//	void LandBasedTracked:: GoDown(){
-//		std::cout << "LandBasedTracked::GoDown is called\n";
-//		API::turnLeft();
-//		API::turnLeft();
-//		API::moveForward();
-//		} 
+ * */ 
 /**
  * @brief Method definition for derived class : TurnLeft
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
  * */
 	void LandBasedTracked::TurnLeft(){
-		std::cout << "LandBasedTracked::TurnLeft is called\n";
-		API::turnLeft();
+		if(LandBasedTracked::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='s';
+		}
+		else if(LandBasedTracked::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='w';
+		}
+		else if(LandBasedTracked::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='n';
+		}
+		else if(LandBasedTracked::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnLeft();
+			direction_='e';
+		}
 		} 
 /**
  * @brief Method definition for derived class : TurnRight
@@ -39,9 +69,29 @@ namespace fp{
  * @param y position of the robot in the maze
  * */
 	void LandBasedTracked::TurnRight(){
-		std::cout << "LandBasedTracked::TurnRight is called\n";
-		API::turnRight();
-		} 
+		if(LandBasedTracked::GetDirection()=='n'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='e';
+		}
+		else if(LandBasedTracked::GetDirection()=='e'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='s';
+		}
+		else if(LandBasedTracked::GetDirection()=='w'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='n';
+		}
+		else if(LandBasedTracked::GetDirection()=='s'){
+			std::cout << "LandBasedWheeled::GoUp is called\n";
+			API::turnRight();
+			direction_='w';
+		}
+		}
+
+ 
 int LandBasedTracked::get_x() const{
 	return x_;
 }
