@@ -16,63 +16,12 @@ protected:
 public:
 	// Method Prototypes
 	virtual void MoveForward() override;
-	//virtual void GoDown() override;
 	virtual void TurnLeft() override;
 	virtual void TurnRight() override;
 	virtual char GetDirection() override;
 	int get_x() const;
 	int get_y() const;
-//	virtual void PickUp(std::string) override;
-//	virtual void Release(std::string) override;
 	void SpeedUp(int);
-//	
-//	/**
-// * @brief
-//    Accesors and Mutators to access and modify protected attributes of derived class
-// * */
-// 
-// 	int get_y()
-// 
-//    /**
-// * @brief Accesors to access protected attributes of derived class i.e. wheel_number
-// * @return Wheel number of the robot
-// * */
-//	int get_wheel_number(){
-//		
-//		return wheel_number;
-//		}
-//	/**
-// * @brief Accesors to access protected attributes of derived class i.e. wheel_type
-// * @return Type of the wheel of the robot
-// * */
-//	std::string get_wheel_type() const{
-//		return *wheel_type;
-//	}
-//	
-//	/**
-// * @brief Mutators to modify protected attributes of derived class i.e. wheel_number
-// * @param Number of wheels of the robot
-// * */
-//	void set_wheel_number(int number){
-//		wheel_number= number;
-//	}
-//	/**
-// * @brief Mutators to modify protected attributes of derived class i.e. wheel_type
-// * @param Type of wheels of the robot
-// * */
-//	void set_wheel_type(std::string type_of_wheel){
-//		*wheel_type= type_of_wheel;
-//	}
-	/**
-// * @brief Deep Copy Constructor and Destructor for Derived class
-// * @param Refrence to the Object of the derived class
-// * */
-//	LandBasedWheeled(const LandBasedWheeled &obj)
-//		:LandBasedRobot( obj.get_x(),obj.get_y(), obj.get_direction()){
-//		wheel_number=obj.wheel_number;
-//		wheel_type = new std::string;
-//		*wheel_type=obj.get_wheel_type();
-//	}
 	/**
  * @brief Derived Constructor with default attribute values
  * @param Name of the robot

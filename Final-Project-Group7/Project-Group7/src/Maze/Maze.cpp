@@ -2,9 +2,10 @@
 #include "../API/API.h"
 #include <vector>
 
-
+/**
+ * @brief It Creates a data set of North, East, West and South wall, a 16x16 matrix
+ */
 fp::Maze::Maze(){
-    //Creates a data set of North, East, West and South wall, a 16x16 matrix
 		fp::Maze::North[16][16]={};
 		fp::Maze::South[16][16]={};
 		fp::Maze::East[16][16]={};
@@ -44,8 +45,13 @@ fp::Maze::Maze(){
 			}
 		}
 	}
-
-void fp::Maze::ReadMaze(int x,int y,char d) // Inputs (x,y) position and output from getDirection() of the robot NOTE: The getDirection() must return direction according to the world frame
+/**
+ * @brief Inputs (x,y) position and output from getDirection() of the robot NOTE: The getDirection() returns direction according to the world frame.
+ * @param x
+ * @param y
+ * @param d
+ */
+void fp::Maze::ReadMaze(int x,int y,char d) 
 {
 	
             dir = d;
@@ -106,7 +112,11 @@ void fp::Maze::ReadMaze(int x,int y,char d) // Inputs (x,y) position and output 
                           }
                   }
 }
-// this function should modify all the four static wall matrix.
+/**
+ * @brief This function modifies all the four static wall matrix.
+ * @param X
+ * @param Y
+ **/
 void fp::Maze::colorPath(std::vector<int> &X, std::vector<int> &Y){
     for(unsigned int i=0 ; i<X.size() ; i++)
         API::setColor(X[i],Y[i],'g'); //Sets color to the path x,y as green by calling the API function.

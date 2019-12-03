@@ -32,11 +32,6 @@ namespace fp{
 		}
 		} 
 /**
- * @brief Method definition for derived class : GoDown
- * @param x position of the robot in the maze
- * @param y position of the robot in the maze
- * */ 
-/**
  * @brief Method definition for derived class : TurnLeft
  * @param x position of the robot in the maze
  * @param y position of the robot in the maze
@@ -99,18 +94,5 @@ int LandBasedTracked::get_y() const {
 	return y_;
 } 
 char LandBasedTracked::GetDirection(){ return direction_;}
-///**
-// * @brief Method definition for derived class : PickUp
-// * @param Pick up from the robotic arm
-// * */
-//	void LandBasedTracked::PickUp(std::string){
-//		std::cout << "LandBasedTracked::Pickup is called\n";
-//		} 
-///**
-// * @brief Method definition for derived class : Release
-// * @param Release from the robotic arm
-// * */
-//	void LandBasedTracked::Release(std::string){
-//		std::cout << "LandBasedTracked::Release is called\n";
-//		}
+
 } 
