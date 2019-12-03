@@ -1,0 +1,6 @@
+<map id="fp::Maze::ReadMaze" name="fp::Maze::ReadMaze">
+<area shape="rect" id="node2" href="$classfp_1_1_a_p_i.html#a3452beb4232e7960ffdb8c0d4a1f0d30" title="It checks for a wall in front of the robot. " alt="" coords="198,5,322,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_a_p_i.html#a9b0b04cf1cfc62ae6f5eef1ac1729eb2" title="It displays the wall at a given position. " alt="" coords="203,56,317,83"/>
+<area shape="rect" id="node4" href="$classfp_1_1_a_p_i.html#acdc812c3acadeb2890691e6c95a89816" title="It checks for a wall in right of the robot. " alt="" coords="197,107,323,133"/>
+<area shape="rect" id="node5" href="$classfp_1_1_a_p_i.html#a43b1e7f9b91aba577078af681c7807b3" title="It checks for a wall in left of the robot. " alt="" coords="202,157,318,184"/>
+</map>

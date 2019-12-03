@@ -1,0 +1,7 @@
+<map id="fp::API::setWall" name="fp::API::setWall">
+<area shape="rect" id="node2" href="$classfp_1_1_maze.html#af090b97595ed34cad9f7c8de9e79a127" title="It Creates a data set of North, East, West and South wall, a 16x16 matrix. " alt="" coords="183,5,297,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_maze.html#a9f1d533f1b45692debbc0d8442b88f82" title="It updates the &#39;n&#39;,&#39;s&#39;,&#39;e&#39;,&#39;w&#39; 2d array. " alt="" coords="168,56,312,83"/>
+<area shape="rect" id="node4" href="$classfp_1_1_algorithm.html#a5f67ee6d22dbc1919f2c12d778e4cd71" title="Function definition for Algorithm class : GenerateSequence. The function generates the path from the ..." alt="" coords="360,31,575,57"/>
+<area shape="rect" id="node6" href="$classfp_1_1_algorithm.html#ada4355f0f4b0fff8823ee67e6108cb07" title="Function definition for Algorithm class : MoveRobot. The function makes the robot move through the se..." alt="" coords="382,81,553,108"/>
+<area shape="rect" id="node5" href="$classfp_1_1_algorithm.html#ad0468f9902332018e6b17893aa67cf6e" title="Function definition for Algorithm class : SolveMaze. The function finally solves the maze from the st..." alt="" coords="623,56,792,83"/>
+</map>

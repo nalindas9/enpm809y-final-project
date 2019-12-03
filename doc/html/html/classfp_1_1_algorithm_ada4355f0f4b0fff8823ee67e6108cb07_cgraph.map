@@ -1,0 +1,9 @@
+<map id="fp::Algorithm::MoveRobot" name="fp::Algorithm::MoveRobot">
+<area shape="rect" id="node2" href="$classfp_1_1_maze.html#a629607d036ca468d9ddcf6b8d3a27b30" title="This function modifies all the four static wall matrix. " alt="" coords="228,31,364,57"/>
+<area shape="rect" id="node4" href="$classfp_1_1_maze.html#a9f1d533f1b45692debbc0d8442b88f82" title="It updates the &#39;n&#39;,&#39;s&#39;,&#39;e&#39;,&#39;w&#39; 2d array. " alt="" coords="224,107,368,133"/>
+<area shape="rect" id="node3" href="$classfp_1_1_a_p_i.html#aee5aaa673b406ddaab3310fcb3a51d83" title="It sets the color of the cell at the given position. " alt="" coords="419,5,539,32"/>
+<area shape="rect" id="node5" href="$classfp_1_1_a_p_i.html#a3452beb4232e7960ffdb8c0d4a1f0d30" title="It checks for a wall in front of the robot. " alt="" coords="417,56,541,83"/>
+<area shape="rect" id="node6" href="$classfp_1_1_a_p_i.html#a9b0b04cf1cfc62ae6f5eef1ac1729eb2" title="It displays the wall at a given position. " alt="" coords="421,107,536,133"/>
+<area shape="rect" id="node7" href="$classfp_1_1_a_p_i.html#acdc812c3acadeb2890691e6c95a89816" title="It checks for a wall in right of the robot. " alt="" coords="416,157,541,184"/>
+<area shape="rect" id="node8" href="$classfp_1_1_a_p_i.html#a43b1e7f9b91aba577078af681c7807b3" title="It checks for a wall in left of the robot. " alt="" coords="421,208,537,235"/>
+</map>

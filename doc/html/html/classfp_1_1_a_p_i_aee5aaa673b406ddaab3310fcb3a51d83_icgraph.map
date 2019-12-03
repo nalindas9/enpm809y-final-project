@@ -1,0 +1,5 @@
+<map id="fp::API::setColor" name="fp::API::setColor">
+<area shape="rect" id="node2" href="$classfp_1_1_maze.html#a629607d036ca468d9ddcf6b8d3a27b30" title="This function modifies all the four static wall matrix. " alt="" coords="173,5,309,32"/>
+<area shape="rect" id="node3" href="$classfp_1_1_algorithm.html#ada4355f0f4b0fff8823ee67e6108cb07" title="Function definition for Algorithm class : MoveRobot. The function makes the robot move through the se..." alt="" coords="357,5,528,32"/>
+<area shape="rect" id="node4" href="$classfp_1_1_algorithm.html#ad0468f9902332018e6b17893aa67cf6e" title="Function definition for Algorithm class : SolveMaze. The function finally solves the maze from the st..." alt="" coords="576,5,745,32"/>
+</map>
