@@ -11,7 +11,7 @@ class Algorithm
 	public:
 	bool goal_flag;
 	struct Node{
-		int px,py;
+	int px,py;
     int cx,cy;
     char prev_dir,next_dir;
     //string actions;

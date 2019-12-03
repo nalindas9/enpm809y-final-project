@@ -21,7 +21,7 @@ using namespace std;
 std::vector<fp::Algorithm::Node> valid;
 
 bool fp::Algorithm::CheckNode(int x,int y, char dir){
-	for(int i=0;i<fp::Algorithm::queue.size();i++){
+	for(unsigned int i=0;i<fp::Algorithm::queue.size();i++){
 		if(fp::Algorithm::queue[i].cx==x && fp::Algorithm::queue[i].cy==y && fp::Algorithm::queue[i].next_dir==dir){
 			return true;
 		}
@@ -280,11 +280,11 @@ void fp::Algorithm::GenerateSequence(fp::Maze& maze_algo, std::shared_ptr<fp::La
   //seen[temp_node.cx][temp_node.cy] = 1;
   fp::Algorithm::queue.push_back(temp_node);
   
-  for(int i=0 ; i<fp::Algorithm::queue.size() ; i++){
+  for(unsigned int i=0 ; i<fp::Algorithm::queue.size() ; i++){
     //   cout<<"Iteration : "<<i<<endl;
     //   cout<<"exploring ("<<queue[i].cx<<","<<queue[i].cy<<")"<<endl;
       ValidNodes(maze_algo,fp::Algorithm::queue[i].cx,fp::Algorithm::queue[i].cy,fp::Algorithm::queue[i].next_dir);
-      for(int k=0 ; k<valid.size() ; k++){
+      for(unsigned int k=0 ; k<valid.size() ; k++){
           if(fp::Algorithm::CheckNode(valid[k].cx , valid[k].cy , valid[k].next_dir)==false){
             //seen[valid[k].cx][valid[k].cy] = 1;
             queue.push_back(valid[k]);
@@ -363,7 +363,7 @@ void fp::Algorithm::GenerateSequence(fp::Maze& maze_algo, std::shared_ptr<fp::La
       std::reverse(fp::Algorithm::Y.begin(),fp::Algorithm::Y.end());
 	  cerr<<"Generate sequence ended with this sequence "<<endl;
 	  cerr<<"======================="<<endl;
-	  for(int i=0;i<fp::Algorithm::direc.size();i++){
+	  for(unsigned int i=0;i<fp::Algorithm::direc.size();i++){
 		  cerr<<"("<<fp::Algorithm::X[i]<<","<<fp::Algorithm::Y[i]<<")"<<"	Direc ["<<i<<"] = "<<fp::Algorithm::direc[i]<<endl;
 	  }
 	  cerr<<"======================="<<endl;
@@ -390,8 +390,8 @@ void fp::Algorithm::MoveRobot(fp::Maze& maze_algo, std::shared_ptr<fp::LandBased
 //	  cerr<<"======================="<<endl;
 	int tempx,tempy;
 	char tempdir;
-	bool flag{false};
-	for(int i=1;i<fp::Algorithm::direc.size();i++){
+//	bool flag{false};
+	for(unsigned int i=1;i<fp::Algorithm::direc.size();i++){
 		
 //		std::cerr << "robot " << robot->get_x() << ' ' << robot->get_y() << ' ' << robot->GetDirection() << " Next -> ";
 //		std::cerr << fp::Algorithm::X[i] << ' ' << fp::Algorithm::Y[i] << ' ' << fp::Algorithm::direc[i] << std::endl;
@@ -523,6 +523,9 @@ void fp::Algorithm::SolveMaze(fp::Maze& maze, std::shared_ptr<fp::LandBasedRobot
 		fp::Algorithm::GenerateSequence(maze,robot);
 		cerr<<"Generate sequence finished "<<endl;
 		fp::Algorithm::MoveRobot(maze,robot);
-		if ((robot->get_x() == 7 && robot->get_y() == 7) || (robot->get_x() == 7 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 7)) {break;}
+		if ((robot->get_x() == 7 && robot->get_y() == 7) || (robot->get_x() == 7 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 7)) {
+			fp::API::clearAllColor();
+			break;
+			}
 	}
 }
