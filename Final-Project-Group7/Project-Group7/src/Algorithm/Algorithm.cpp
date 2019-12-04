@@ -6,11 +6,11 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-using namespace std;
 
 
 
-std::vector<fp::Algorithm::Node> valid; // Vector to store all the Valid nodes 
+
+
 
 /**
  * @brief Function definition for Algorithm class : CheckNode. The function checks if the current node is previously explored or not.
@@ -38,7 +38,7 @@ bool fp::Algorithm::CheckNode(int x,int y, char dir){
 
 void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
     Node temp;
-    valid.clear();
+    fp::Algorithm::valid.clear();
     
     // Whenever robot is facing North
     if(dir=='n'){
@@ -53,7 +53,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
 		temp.prev_dir = 'n';
         temp.next_dir='s';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp); //Valid node is updated
+        fp::Algorithm::valid.push_back(temp); //Valid node is updated
 	}
 	}
 	if(maze_algo.East[x][y]!=1){ //If there is no wall in the East - East node is explored
@@ -64,7 +64,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'n';
         temp.next_dir='e';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     if(maze_algo.North[x][y]!=1){ //If there is no wall in the north - North node is explored
@@ -75,7 +75,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'n';
         temp.next_dir='n';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     if(maze_algo.West[x][y]!=1){ //If there is no wall in the west - West node is explored
@@ -86,7 +86,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'n';
         temp.next_dir='w';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     
@@ -102,7 +102,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
 		temp.prev_dir='e';
         temp.next_dir='s';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.East[x][y]!=1){
@@ -113,7 +113,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir='e';
         temp.next_dir='e';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.North[x][y]!=1){
@@ -124,7 +124,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir='e';
         temp.next_dir='n';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.North[x][y]==1 && maze_algo.East[x][y]==1 && maze_algo.South[x][y]==1){
@@ -135,7 +135,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir='e';
         temp.next_dir='w';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
 	}
 	}
     }
@@ -150,7 +150,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
 		temp.prev_dir = 'w';
 		temp.next_dir = 's';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.North[x][y]==1 && maze_algo.West[x][y]==1 && maze_algo.South[x][y]==1){
@@ -161,7 +161,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'w';
 		temp.next_dir ='e';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
 	}
 	}
     if(maze_algo.North[x][y]!=1){
@@ -172,7 +172,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'w';
 		temp.next_dir ='n';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     
@@ -184,7 +184,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 'w';
 		temp.next_dir = 'w';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     }
@@ -199,7 +199,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
 		temp.prev_dir = 's';
         temp.next_dir ='s';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.East[x][y]!=1){
@@ -210,7 +210,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 's';
         temp.next_dir ='e';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
 	if(maze_algo.South[x][y]==1 && maze_algo.East[x][y]==1 && maze_algo.West[x][y]==1){
@@ -221,7 +221,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 's';
         temp.next_dir ='n';
         if(temp.cy>=0 && temp.cy<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
 	}
 	}
     
@@ -233,7 +233,7 @@ void fp::Algorithm::ValidNodes(fp::Maze& maze_algo,int x,int y, char dir){
         temp.prev_dir = 's';
         temp.next_dir ='w';
         if(temp.cx>=0 && temp.cx<=15){
-        valid.push_back(temp);
+        fp::Algorithm::valid.push_back(temp);
         }
     }
     }
@@ -268,10 +268,10 @@ void fp::Algorithm::GenerateSequence(fp::Maze& maze_algo, std::shared_ptr<fp::La
   //Iterate through the maze and check the condition if the Goal node is reached.
   for(unsigned int i=0 ; i<fp::Algorithm::queue.size() ; i++){
       ValidNodes(maze_algo,fp::Algorithm::queue[i].cx,fp::Algorithm::queue[i].cy,fp::Algorithm::queue[i].next_dir);
-      for(unsigned int k=0 ; k<valid.size() ; k++){
-          if(fp::Algorithm::CheckNode(valid[k].cx , valid[k].cy , valid[k].next_dir)==false){ //If the node is not previously explored, the valid node is pushed in the queue
-            queue.push_back(valid[k]);
-            if ((valid[k].cx == 7 && valid[k].cy == 7) || (valid[k].cx == 7 && valid[k].cy == 8) || (valid[k].cx == 8 && valid[k].cy == 8) || (valid[k].cx == 8 && valid[k].cy == 7)){
+      for(unsigned int k=0 ; k<fp::Algorithm::valid.size() ; k++){
+          if(fp::Algorithm::CheckNode(fp::Algorithm::valid[k].cx , fp::Algorithm::valid[k].cy , fp::Algorithm::valid[k].next_dir)==false){ //If the node is not previously explored, the valid node is pushed in the queue
+            queue.push_back(fp::Algorithm::valid[k]);
+            if ((fp::Algorithm::valid[k].cx == 7 && fp::Algorithm::valid[k].cy == 7) || (fp::Algorithm::valid[k].cx == 7 && fp::Algorithm::valid[k].cy == 8) || (fp::Algorithm::valid[k].cx == 8 && fp::Algorithm::valid[k].cy == 8) || (fp::Algorithm::valid[k].cx == 8 && fp::Algorithm::valid[k].cy == 7)){
                 fp::Algorithm::goal_flag=true; //If goal is reached, returns flag as 'true'
                 break;
             }
@@ -463,7 +463,12 @@ void fp::Algorithm::SolveMaze(fp::Maze& maze, std::shared_ptr<fp::LandBasedRobot
 		//The given robot moves through the maze 
 		fp::Algorithm::MoveRobot(maze,robot);
         //Setting goal condition
+		if (fp::Algorithm::goal_flag==false) {
+			std::cerr<<"No Path Found !!"<<std::endl;
+			break;
+			}
 		if ((robot->get_x() == 7 && robot->get_y() == 7) || (robot->get_x() == 7 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 8) || (robot->get_x() == 8 && robot->get_y() == 7)) {
+			std::cerr<<"Goal Reached "<<std::endl;
 			fp::API::clearAllColor();
 			break;
 			}

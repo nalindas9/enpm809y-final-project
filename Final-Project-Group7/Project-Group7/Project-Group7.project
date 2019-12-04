@@ -29,7 +29,6 @@
       <File Name="src/LandBasedWheeled/LandBasedWheeled.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="LandBasedRobot">
-      <File Name="src/LandBasedRobot/LandBasedRobot.cpp"/>
       <File Name="src/LandBasedRobot/LandBasedRobot.h"/>
     </VirtualDirectory>
     <File Name="main.cpp"/>
